@@ -1,0 +1,62 @@
+/* Styles for hero page */
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 2.5em;
+  padding-inline: 4em;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+}
+
+.textContainer {
+  display: inherit;
+  flex-direction: column;
+  gap: calc(2em - 24px);
+}
+
+.header {
+  font-size: 3.5rem;
+  width: 75%;
+  font-weight: 600;
+}
+
+.description {
+  color: #ffffffa4;
+  margin-bottom: 1.5em;
+  width: 70%;
+  font-size: 1.2rem;
+}
+
+.description .meLink {
+  color: var(--yellow);
+
+  &:hover {
+    text-decoration: underline wavy currentColor;
+  }
+}
+
+.heroCta {
+  background: var(--yellow);
+  color: var(--dark-gray);
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: var(--border-radius);
+}
+
+/* Image */
+.imageContainer {
+  background-color: var(--dark-gray);
+  /* flex: 1; */
+  padding: 0.5em;
+  border-radius: 1rem;
+  /* width: */
+}
+
+.imageContainer img {
+  object-fit: cover;
+}

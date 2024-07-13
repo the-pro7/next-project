@@ -1,0 +1,35 @@
+/* Navbar styles */
+.container {
+  padding: 0 2em;
+  padding-top: 2em;
+  padding-inline: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.links > * {
+  font-size: 1rem;
+}
+
+.link[href="/signup"] {
+  color: var(--dark-gray);
+  background-color: var(--purple);
+  padding: 0.7em 3em;
+  border-radius: 1rem;
+}
