@@ -3,6 +3,8 @@ import styles from "./home.module.css";
 import Link from "next/link";
 import heroImage from "../../public/landing-image.svg";
 import brandsImage from "../../public/Logos.png";
+import dashboardImage from "../../public/third.svg";
+
 
 export default function Home() {
   return (
@@ -34,14 +36,18 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className={styles.brandsSection}>
+     <section className={styles.multiPartSection}>
+     <div className={styles.brandsSection}>
         <Image
           src={brandsImage}
-          fill
           className={styles.brandImage}
           alt="Brand Images"
         />
-      </section>
+      </div>
+      <div className={styles.dashboardImage}>
+        <Image src={dashboardImage}  alt="Wallet dashboard image"/>
+      </div>
+     </section>
     </main>
   );
 }
