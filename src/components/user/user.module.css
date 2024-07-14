@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.image_container {
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  outline: 3px solid var(--light-gray);
+  box-shadow: 3px 4px 15px rgb(0 0 0 / 0.5);
+  overflow: clip;
+}
+
+.image_container img {
+  object-fit: cover;
+}
+
+.text_container h3 {
+  font-weight: 300;
+}

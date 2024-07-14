@@ -6,7 +6,7 @@ import Navbar from "../components/navbar/Navbar";
 // const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "400", "600", "700"],
+  weight: ["100", "300", "400", "600", "700"],
 });
 
 export const metadata: Metadata = {
