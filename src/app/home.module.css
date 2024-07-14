@@ -23,6 +23,7 @@
   font-size: 3.5rem;
   width: 75%;
   font-weight: 600;
+  letter-spacing: 1.5px;
 }
 
 .description {
@@ -40,12 +41,13 @@
   }
 }
 
-.heroCta {
+.landingCta {
   background: var(--yellow);
   color: var(--dark-gray);
   width: fit-content;
   padding: 1em 2em;
   border-radius: var(--border-radius);
+  text-transform: capitalize;
 }
 
 /* Image */
@@ -141,4 +143,46 @@
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.5;
+}
+
+/* Questions cta */
+.questionsSection {
+  width: 80%;
+  margin: 4.5em auto 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.questions_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.questions_text .header {
+  width: 70%;
+}
+
+.questions_text .description {
+  width: 65%;
+}
+
+.questions_image {
+  position: relative;
+  border-radius: 1rem;
+  overflow: clip;
+}
+
+.questions_image img {
+  object-fit: cover;
+}
+
+.questionsSection::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--stroke-height);
+  background-color: var(--stroke-color);
+  margin-top: 1em;
 }
