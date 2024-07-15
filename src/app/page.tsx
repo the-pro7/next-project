@@ -66,9 +66,10 @@ export default function Home() {
       </section>
       <section className={styles.questionsSection}>
         <div className={styles.questions_text}>
-          <h2 className={styles.header}>Questions? Let’s talk</h2>
+          <h2 className={styles.header}>Questions? Let&rsquo;s talk</h2>
           <p className={styles.description}>
-            Contact us through our 24/7 live chat.We’re always happy to help!
+            Contact us through our 24/7 live chat.We&rsquo;re always happy to
+            help!
           </p>
           <Link href="/get-started" className={styles.landingCta}>
             Talk to Us!
