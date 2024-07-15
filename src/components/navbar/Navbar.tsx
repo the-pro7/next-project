@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 
@@ -9,6 +10,22 @@ interface Links {
 }
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const links: Links[] = [
     {
       id: 1,
@@ -24,7 +41,13 @@ const Navbar = () => {
 
   // JSX
   return (
-    <nav className={styles.container}>
+    <nav
+      className={
+        scrolled
+          ? `${styles.container} ${styles.glassMorphism}`
+          : styles.container
+      }
+    >
       <h1 className={styles.logo}>
         <Link href="/">Wallet</Link>
       </h1>

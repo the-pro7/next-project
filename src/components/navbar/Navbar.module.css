@@ -7,6 +7,22 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  position: sticky;
+  top: 10px;
+  background: transparent; /* Initially transparent */
+  border-radius: 1.5rem;
+  z-index: 999;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.glassMorphism {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for definition */
+  margin: 0 2em;
 }
 
 .logo {
