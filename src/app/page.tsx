@@ -13,7 +13,7 @@ export default function Home() {
       <section className={styles.container}>
         <div className={styles.textContainer}>
           <h1 className={styles.header}>
-            Well Janice doesn't believe I'm done!
+            Well Janice doesn&rsquo;t believe I&rsquo;m done!
           </h1>
           <p className={styles.description}>
             This is a template Figma file, turned into code using my own skills.
@@ -55,8 +55,8 @@ export default function Home() {
           <h3 className={styles.testimony}>
             “Wallet is a great product! All of my most important information is
             there - credit cards, transit cards, boarding passes, tickets, and
-            more. And I don't need to worry because it's all in one place!
-            thanks!”
+            more. And I don&rsquo;t need to worry because it&rsquo;s all in one
+            place! thanks!”
           </h3>
           <User
             image="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
