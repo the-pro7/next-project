@@ -12,9 +12,7 @@ export default function Home() {
     <main>
       <section className={styles.container}>
         <div className={styles.textContainer}>
-          <h1 className={styles.header}>
-            Well Janice doesn&rsquo;t believe I&rsquo;m done!
-          </h1>
+          <h1 className={styles.header}>SaaS Landing Page Example</h1>
           <p className={styles.description}>
             This is a template Figma file, turned into code using my own skills.
             Learn more at{" "}
