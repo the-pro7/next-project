@@ -12,4 +12,27 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [14.x, 16.x, 18.x, 20.x]
+
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
+
+  - name: Setup Node.js
+    uses: actions/setup-node@v2
+    with:
+      node-vesrion: ${{ matrix.node-version }}
+
+  - name: Install dependencies
+    run: npm install
+
+  - name: Run build
+    run: npm run build
+
+  - name: Run test
+    run: npm test
+
+  - name: Deploy to vercel
+    run: vercel --prod
+    env:
+    VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
