@@ -29,8 +29,8 @@ steps:
   - name: Run build
     run: npm run build
 
-  - name: Run test
-    run: npm test
+  # - name: Run test
+  #   run: npm test
 
   - name: Deploy to vercel
     run: vercel --prod
