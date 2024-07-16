@@ -8,11 +8,6 @@
   position: relative;
 }
 
-.container::after {
-  content: "";
-  position: absolute;
-}
-
 .textContainer {
   display: inherit;
   flex-direction: column;

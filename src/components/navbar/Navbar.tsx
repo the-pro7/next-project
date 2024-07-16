@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 
-interface Links {
+export interface Links {
   id: number;
   path: string;
   text: string;

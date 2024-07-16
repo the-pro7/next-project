@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.container span {
+  font-size: calc(0.5rem + 16px);
+  font-weight: 300;
+}
+
+.container button {
+  width: max-content;
+  background-color: var(--purple);
+  color: var(--dark-gray);
+}
+
+.formControl {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.formControl > * {
+  padding: 1em 1.5em;
+  border-radius: 1rem;
+}
+
+.formControl button {
+  padding-inline: 5em;
+}
+
+.formControl input {
+  background-color: var(--dark-gray);
+}
