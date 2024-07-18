@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import { useTheme } from "@/src/context/ThemeProvider";
 
 export interface Links {
   id: number;
@@ -11,6 +12,7 @@ export interface Links {
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,6 +54,11 @@ const Navbar = () => {
         <Link href="/">Wallet</Link>
       </h1>
       <ul className={styles.links}>
+        <li>
+          <button onClick={toggle} title="Change theme">
+            {theme == "dark" ? "Dark" : "Light"}
+          </button>
+        </li>
         {links.map((link: Links) => (
           <li key={link.id}>
             <Link href={link.path} className={styles.link}>
