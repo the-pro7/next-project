@@ -12,7 +12,7 @@ export interface Links {
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggle } = useTheme();
+  const { theme, toggle } = useTheme()!;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,6 +58,9 @@ const Navbar = () => {
           <button onClick={toggle} title="Change theme">
             {theme == "dark" ? "Dark" : "Light"}
           </button>
+        </li>
+        <li>
+          <Link href="/dashboard">Dashboard</Link>
         </li>
         {links.map((link: Links) => (
           <li key={link.id}>

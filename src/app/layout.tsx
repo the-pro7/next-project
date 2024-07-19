@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import ThemeProvider from "../context/ThemeProvider";
+import { useRouter } from "next/router";
 
 // const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -21,6 +22,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const router = useRouter();
+  const noLayoutPaths: string[] = ["/dashboard"];
+
+  const shouldNotRenderLayout: boolean = !noLayoutPaths.includes(
+    router.pathname
+  );
+
   return (
     <html lang="en">
       <body className={poppins.className}>
