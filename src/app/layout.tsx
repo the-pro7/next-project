@@ -25,9 +25,7 @@ export default function RootLayout({
   const router = useRouter();
   const noLayoutPaths: string[] = ["/dashboard"];
 
-  const shouldNotRenderLayout: boolean = !noLayoutPaths.includes(
-    router.pathname
-  );
+  const shouldRenderLayout: boolean = !noLayoutPaths.includes(router.pathname);
 
   return (
     <html lang="en">
