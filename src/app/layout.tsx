@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import ThemeProvider from "../context/ThemeProvider";
-import { useRouter } from "next/router";
+import RenderConditionalLayout from "../components/conditional-rendering/RenderConditionalLayout";
 
 // const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -22,18 +22,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
-  const noLayoutPaths: string[] = ["/dashboard"];
-
-  const shouldRenderLayout: boolean = !noLayoutPaths.includes(router.pathname);
-
   return (
     <html lang="en">
       <body className={poppins.className}>
         <ThemeProvider>
-          <Navbar />
+          <RenderConditionalLayout>
+            <Navbar />
+          </RenderConditionalLayout>
           {children}
-          <Footer />
+          <RenderConditionalLayout>
+            <Footer />
+          </RenderConditionalLayout>
         </ThemeProvider>
       </body>
     </html>

@@ -22,7 +22,7 @@
 }
 
 .description {
-  color: #ffffffa4;
+  color: var(--dull-white);
   margin-bottom: 1.5em;
   width: 70%;
   font-size: 1.2rem;
@@ -74,7 +74,7 @@
 }
 
 .brandsSection {
-  --stroke-color: #ffffffa4;
+  --stroke-color: var(--dull-white);
   --stroke-height: 1px;
   padding: 3em 0;
   margin-bottom: 3.5em;
@@ -160,6 +160,7 @@
 
 .questions_text .description {
   width: 65%;
+  color: var(--dull-white);
 }
 
 .questions_image {
