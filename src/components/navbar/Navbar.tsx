@@ -59,9 +59,9 @@ const Navbar = () => {
             {theme == "dark" ? "Dark" : "Light"}
           </button>
         </li>
-        <li>
+        {/* <li>
           <Link href="/dashboard">Dashboard</Link>
-        </li>
+        </li> */}
         {links.map((link: Links) => (
           <li key={link.id}>
             <Link href={link.path} className={styles.link}>

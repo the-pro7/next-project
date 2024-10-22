@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
@@ -6,8 +7,10 @@ import brandsImage from "../../public/Logos.png";
 import dashboardImage from "../../public/third.svg";
 import { Cards } from "../components/card/Cards";
 import { User } from "../components/user/User";
+import { useTheme } from "../context/ThemeProvider";
 
-export default function Home() {
+export default function HomePage() {
+  const { theme } = useTheme()!;
   return (
     <main>
       <section className={styles.container}>
@@ -36,14 +39,14 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.multiPartSection}>
-        <div className={styles.brandsSection}>
+        <div className={`${styles.brandsSection} ${theme === 'light' && styles.light}`}>
           <Image
             src={brandsImage}
             className={styles.brandImage}
             alt="Brand Images"
           />
         </div>
-        <div className={styles.dashboardImage}>
+        <div className={`${styles.dashboardImage} ${theme === 'light' && styles.dashBoardImageDark}`}>
           <Image src={dashboardImage} alt="Wallet dashboard image" />
         </div>
         <Cards />

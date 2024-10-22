@@ -74,11 +74,12 @@
 }
 
 .brandsSection {
-  --stroke-color: var(--dull-white);
-  --stroke-height: 1px;
+  --_stroke-color: var(--dull-white);
+  --_stroke-height: 1px;
   padding: 3em 0;
   margin-bottom: 3.5em;
   position: relative;
+  background-color: var(--primary-gray);
 }
 
 .brandsSection img {
@@ -91,8 +92,8 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: var(--stroke-height);
-  background-color: var(--stroke-color);
+  height: var(--_stroke-height);
+  background-color: var(--_stroke-color);
   margin-bottom: 1em;
 }
 
@@ -101,8 +102,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: var(--stroke-height);
-  background-color: var(--stroke-color);
+  height: var(--_stroke-height);
+  background-color: var(--_stroke-color);
   margin-top: 1em;
 }
 
@@ -114,6 +115,10 @@
 
 .dashboardImage img {
   object-fit: contain;
+}
+
+.dashboardImage.dashBoardImageDark {
+  background-color: var(--primary-gray);
 }
 
 /* Testimonial section */
@@ -178,7 +183,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: var(--stroke-height);
-  background-color: var(--stroke-color);
+  height: var(--_stroke-height);
+  background-color: var(--_stroke-color);
   margin-top: 1em;
 }
